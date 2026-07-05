@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Para Ti ❤️</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
+    background:linear-gradient(180deg,#0b1025,#1f2a48);
+    color:white;
+    text-align:center;
+}
+
+header{
+    padding:80px 20px;
+}
+
+h1{
+    font-size:42px;
+}
+
+p{
+    font-size:20px;
+    line-height:1.8;
+}
+
+button{
+    background:#ff4d6d;
+    color:white;
+    border:none;
+    padding:15px 35px;
+    border-radius:30px;
+    font-size:18px;
+    cursor:pointer;
+    margin-top:20px;
+}
+
+button:hover{
+    background:#ff2954;
+}
+
+#carta{
+    display:none;
+    max-width:800px;
+    margin:auto;
+    padding:30px;
+}
+
+img{
+    width:250px;
+    border-radius:20px;
+    margin:15px;
+    box-shadow:0 0 20px rgba(255,255,255,.2);
+}
+
+.contador{
+    font-size:28px;
+    margin-top:30px;
+    color:#ffd166;
+}
+
+footer{
+    margin-top:80px;
+    padding:30px;
+    opacity:.8;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>❤️ Para el amor de mi vida ❤️</h1>
+
+<p>
+Hay regalos que se olvidan con el tiempo...
+<br><br>
+Espero que este haga exactamente lo contrario.
+</p>
+
+<button onclick="abrirCarta()">Abrir mi corazón 💌</button>
+
+</header>
+
+<div id="carta">
+
+<h2>Hola, mi amor ❤️</h2>
+
+<p>
+
+Si estás leyendo esto, significa que decidiste volver a acercar esta pequeña etiqueta a tu teléfono.
+
+No importa si han pasado días, meses o incluso años.
+
+Quiero que recuerdes que desde el momento en que escribí estas palabras lo hice con todo mi corazón.
+
+Gracias por aparecer en mi vida.
+
+Gracias por hacerme sonreír.
+
+Gracias por cada abrazo, cada beso, cada mirada y cada momento.
+
+No sé cuánto tiempo nos regalará la vida...
+
+Pero deseo que sea muchísimo.
+
+Quiero seguir creando recuerdos contigo, seguir tomándote de la mano y seguir eligiéndote todos los días.
+
+Si alguna vez dudas de cuánto te amo...
+
+Vuelve aquí.
+
+Porque este pequeño rincón de Internet siempre tendrá una parte de mi corazón esperándote.
+
+❤️ Te amo infinitamente ❤️
+
+</p>
+
+<h2>Nuestros recuerdos 📸</h2>
+
+<img src="foto1.jpg">
+<img src="foto2.jpg">
+<img src="foto3.jpg">
+
+<div class="contador" id="dias"></div>
+
+<br><br>
+
+<h2>🎵 Nuestra canción</h2>
+
+<audio controls>
+<source src="cancion.mp3" type="audio/mpeg">
+</audio>
+
+<footer>
+
+Para siempre...
+
+❤️ Tú y yo ❤️
+
+</footer>
+
+</div>
+
+<script>
+
+function abrirCarta(){
+document.getElementById("carta").style.display="block";
+window.scrollTo({
+top:500,
+behavior:"smooth"
+});
+}
+
+const inicio=new Date("2025-01-01");
+
+const hoy=new Date();
+
+const diferencia=hoy-inicio;
+
+const dias=Math.floor(diferencia/(1000*60*60*24));
+
+document.getElementById("dias").innerHTML=
+"❤️ Hemos compartido <b>"+dias+"</b> días juntos ❤️";
+
+</script>
+
+</body>
+</html>
